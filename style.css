@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #663399;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 70px;
+  margin-left: 80px;
+  margin-top: 20px;
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+spam {
+  font-size: 10px;
+}
+
+.principal {
+  background-color: #402060;
+  height: 700px;
+  width: 500px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: 2;
+  justify-content: center;
+  align-items: top;
+  border: gray solid 2px;
+  border-radius: 5%;
+}
+.entrada {
+  margin-top: 50px;
+  display: inline-flex;
+}
+
+#caixa {
+  height: 30px;
+  width: 300px;
+  font-size: 20px;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 8px;
+  background-color: #b28cd9;
+  color: black;
+}
+
+#caixa:hover {
+  background-color: white;
+}
+
+#caixa:focus {
+  background-color: white;
+}
+
+::placeholder {
+  color: black;
+  opacity: 0.6;
+}
+
+#btn {
+  height: 35px;
+  width: 100px;
+  font-size: 18px;
+  color: white;
+  background-color: #54c653;
+  border-radius: 8px;
+}
+
+#btn:hover {
+  color: white;
+  background-color: #349a33;
+  transition: 0.5s;
+}
+
+.tarefas {
+  width: 420px;
+  height: 500px;
+  background-color: #8c53c6;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.lista_interna {
+  font-size: 20px;
+}
+
+#btnCancelar {
+  background-color: #e60000;
+  height: 30px;
+  width: 80px;
+  border-radius: 8px;
+  color: white;
+  margin-left: 20px;
+  box-shadow: none;
+}
+
+#btnCancelar:hover {
+  background-color: #b30000;
+  transition: 0.5s;
+}
+
+li {
+  margin-top: 6px;
+  height: 30px;
+  display: grid;
+  grid-template-columns: 75% 20%;
+  align-items: center;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+li:hover {
+  background-color: #0060ff;
+  color: white;
+  transition: 0.6s;
+}
+
+.fundo {
+  background-color: #b28cd9;
+  color: black;
+}
+
+.escuro {
+  background-color: #7239ad;
+  color: white;
+}
