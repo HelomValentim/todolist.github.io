@@ -1,4 +1,5 @@
 function adicionar(){
+  //Função para adicionar uma nova tarefa no BD localStorage
   var caixa = document.getElementById("caixa");
   var item = caixa.value;
   item = item[0].toUpperCase() + item.substring(1);
@@ -6,11 +7,12 @@ function adicionar(){
   localStorage.setItem(chave,item);
   caixa.value = "";
   caixa.focus();
-
+//Chama a função carregar para mostrar a lista de tarefas na tela.
   carregar();
 };
 
 function carregar(){
+  //Função para carregar a lista com as tarefas do BD localStorage
   var lista = document.querySelector(".lista_interna");
   lista.innerHTML = "";
   var store = localStorage;
@@ -18,7 +20,6 @@ function carregar(){
     return;
     console.log('nada');
   };
-
   for (x = 0; x < localStorage.length; x++ ){
     var chave = localStorage.key(x);
     var valor = localStorage.getItem(chave);
@@ -36,17 +37,25 @@ function carregar(){
 };
 
 function excluir(chave){
+  //Função para excluir a tarefa desejada
   localStorage.removeItem(chave);
+  carregar();
+  reChavear();
+};
+
+function reChavear(){
+//Função para alterar as Key's do localStorege para ficarem sempre na sequencia apartir de 1 e recarregar a lista de tarefas.
+  var chaves = Array.from(document.querySelectorAll('li'));
+  var valores = [];
+  chaves.forEach(function(valor){
+    valores.push(localStorage.getItem(valor.id));
+  });
+  localStorage.clear();
+  var i = 1;
+  valores.forEach(function(vl){
+    localStorage.setItem(i,vl);
+    i++;
+  });
   carregar();
 };
 
-/*function reChavear(){
-  var store = localStorage;
-  for (i = 0; i <= store.length; i++){
-    console.log(store.key(i));
-    var chave = store.key(i);
-    var valor = store.getItem(chave);
-    store.setItem(i, valor);
-  };
-  };
-*/
